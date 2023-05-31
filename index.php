@@ -593,31 +593,160 @@ if (!$conn) {
         setGaugeValue_H(gaugeElementHumidity, <?php echo json_encode($tiempo); ?> / 100);
     </script>
 
-    <!--Script Luminosidad-->
+        <!--Script Luminosidad-->
     <script>
         const gaugeElementLux = document.querySelector(".gauge__L");
 
         function setGaugeValue_L(gauge_L, value_L) {
-
             if (value_L < 1) {
                 gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
-            } else if (value_L > 1 && value_L < 2) {
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 1 && value_L <2){
                 gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
-            } else if (value_L > 2 && value_L < 3) {
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 2 && value_L <3){
                 gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
-            } else if (value_L > 3 && value_L < 4) {
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 3 && value_L <4){
                 gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
-            } else if (value_L > 4 && value_L < 5) {
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 4 && value_L <5){
                 gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 5 && value_L <6){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 6 && value_L <7){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 7 && value_L <8){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 8 && value_L <9){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 9 && value_L <10){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            } else if (value_L > 10 && value_L <20){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 20 && value_L < 30){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 30 && value_L < 40){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 40 && value_L <50){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 50 && value_L <60){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 60 && value_L <70){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 70 && value_L <80){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 80 && value_L <90){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 90 && value_L <100){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 20}turn)`;
+            } else if (value_L > 100 && value_L < 200){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 200 && value_L < 300){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 300 && value_L <400){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 400 && value_L <500){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 500 && value_L <600){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 600 && value_L <700){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 700 && value_L <800){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 800 && value_L <900){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            } else if (value_L > 900 && value_L <1000){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#ff8000";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#b4c0be";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
+            }   else if (value_L > 1000 && value_L <1100){
+                gauge_L.querySelector(".gauge__body__L").style.background = "#b4c0be";
+                gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
+
+                gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
             }
 
             a = ((value_L + Number.EPSILON) * 100);
-            gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
+            //gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 200}turn)`;
             gauge_L.querySelector(".gauge__cover__L").textContent = `${a.toFixed(2)} lux`;
         }
         setGaugeValue_L(gaugeElementLux, <?php echo json_encode($lux); ?> / 100);
