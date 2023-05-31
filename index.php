@@ -676,7 +676,7 @@ if (!$conn) {
 
             a = Math.round((value_P + Number.EPSILON) * 100);
             gauge_P.querySelector(".gauge__fill__P").style.transform = `rotate(${value_P / 2}turn)`;
-            gauge_P.querySelector(".gauge__cover__P").textContent = `${a.toFixed(2)} hPa`;
+            gauge_P.querySelector(".gauge__cover__P").textContent = `${a.toFixed(2)} Pa`;
         }
         setGaugeValue_P(gaugeElementPresion, <?php echo json_encode($presion); ?> / 100);
     </script>
