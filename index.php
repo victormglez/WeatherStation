@@ -567,9 +567,9 @@ if (!$conn) {
 
         /*Esta función ÚNICA es la que realiza conversiones de datos, modifica los textos de los indicadores y hace el giro respectivo del indicador. Esta función recibe un indicador y un valor*/
         function setGaugeValue(gauge, value) {
-            a = Math.round((value + Number.EPSILON) * 100);
-            b = Math.round((value + Number.EPSILON) * 100) * (9 / 5) + 32;
-            c = Math.round((value + Number.EPSILON) * 100) + 273.15;
+            a = ((value + Number.EPSILON) * 100);
+            b = ((value + Number.EPSILON) * 100) * (9 / 5) + 32;
+            c = ((value + Number.EPSILON) * 100) + 273.15;
             gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
             gauge.querySelector(".gauge__cover").textContent = `${a.toFixed(2)}°C`;
             gauge.querySelector(".gauge__cover_F").textContent = `${b.toFixed(2)}°F`;
@@ -586,7 +586,7 @@ if (!$conn) {
         const gaugeElementHumidity = document.querySelector(".gauge__H");
 
         function setGaugeValue_H(gauge_H, value_H) {
-            a = Math.round((value_H + Number.EPSILON) * 100);
+            a = ((value_H + Number.EPSILON) * 100);
             gauge_H.querySelector(".gauge__fill__H").style.transform = `rotate(${value_H / 2}turn)`;
             gauge_H.querySelector(".gauge__cover__H").textContent = `${a.toFixed(2)}% rH`;
         }
@@ -616,7 +616,7 @@ if (!$conn) {
                 gauge_L.querySelector(".gauge__fill__L").style.background = "#ff8000";
             }
 
-            a = Math.round((value_L + Number.EPSILON) * 100);
+            a = ((value_L + Number.EPSILON) * 100);
             gauge_L.querySelector(".gauge__fill__L").style.transform = `rotate(${value_L / 2}turn)`;
             gauge_L.querySelector(".gauge__cover__L").textContent = `${a.toFixed(2)} lux`;
         }
@@ -642,39 +642,42 @@ if (!$conn) {
         const gaugeElementPresion = document.querySelector(".gauge__P");
 
         function setGaugeValue_P(gauge_P, value_P) {
-            if (value_P < 100) {
+            if (value_P < 800) {
                 gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
-            } else if (value_P > 100 && value_P < 200) {
+            } else if (value_P > 800 && value_P <811){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#7BEE00";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
-            } else if (value_P > 200 && value_P < 300) {
+            } else if (value_P > 811 && value_P <821){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
-            } else if (value_P > 300 && value_P < 400) {
+            } else if (value_P > 821 && value_P <831){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#7BEE00";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
-            } else if (value_P > 400 && value_P < 500) {
+            } else if (value_P > 831 && value_P <841){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
-            } else if (value_P > 500 && value_P < 600) {
+            } else if (value_P > 841 && value_P <851){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#7BEE00";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
-            } else if (value_P > 600 && value_P < 700) {
+            } else if (value_P > 851 && value_P <861){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
-            } else if (value_P > 700 && value_P < 800) {
+            } else if (value_P > 861 && value_P <871){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#7BEE00";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
-            } else if (value_P > 800 && value_P < 900) {
+            } else if (value_P > 871 && value_P <881){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
-            } else if (value_P > 900 && value_P < 1000) {
+            } else if (value_P > 881 && value_P <891){
                 gauge_P.querySelector(".gauge__body__P").style.background = "#7BEE00";
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
+            }   else if (value_P > 891 && value_P <901){
+                gauge_P.querySelector(".gauge__body__P").style.background = "#b4c0be";
+                gauge_P.querySelector(".gauge__fill__P").style.background = "#7BEE00";
             }
 
-            a = Math.round((value_P + Number.EPSILON) * 100);
+            a = ((value_P + Number.EPSILON) * 100);
             gauge_P.querySelector(".gauge__fill__P").style.transform = `rotate(${value_P / 2}turn)`;
             gauge_P.querySelector(".gauge__cover__P").textContent = `${a.toFixed(2)} Pa`;
         }
