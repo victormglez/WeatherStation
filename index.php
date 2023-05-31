@@ -381,23 +381,6 @@ if (!$conn) {
             box-sizing: border-box;
         }
 
-        .gauge__cover_V_Milla {
-            width: 75%;
-            height: 150%;
-            border-radius: 50%;
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translateX(-52.5%);
-
-            /* Text */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 10%;
-            box-sizing: border-box;
-        }
-
         /*----------------*/
 
         /*Presión*/
@@ -534,7 +517,6 @@ if (!$conn) {
                         <div class="gauge__fill__V"></div>
                         <div class="gauge__cover__V"></div>
                         <div class="gauge__cover_V_M"></div>
-                        <div class="gauge__cover_V_Milla"></div>
                     </div>
                 </div>
                 <!--Acaba el indicador de Velocidad del Viento-->
@@ -630,12 +612,10 @@ if (!$conn) {
 
         function setGaugeValue_V(gauge_V, value_V) {
             a = Math.round((value_V + Number.EPSILON) * 100);
-            b = Math.round((value_V + Number.EPSILON) * 100) / 3.6;
-            c = Math.round((value_V + Number.EPSILON) * 100) / 1.609;
+            b = Math.round((value_V + Number.EPSILON) * 100) * 3.6;
             gauge_V.querySelector(".gauge__fill__V").style.transform = `rotate(${value_V / 2}turn)`;
-            gauge_V.querySelector(".gauge__cover__V").textContent = `${a.toFixed(2)} km/h`;
-            gauge_V.querySelector(".gauge__cover_V_M").textContent = `${b.toFixed(2)} m/s`;
-            gauge_V.querySelector(".gauge__cover_V_Milla").textContent = `${c.toFixed(2)} milla/h`;
+            gauge_V.querySelector(".gauge__cover__V").textContent = `${a.toFixed(2)} m/s`;
+            gauge_V.querySelector(".gauge__cover_V_M").textContent = `${b.toFixed(2)} km/h`;
         }
         setGaugeValue_V(gaugeElementViento, <?php echo json_encode($viento); ?> / 100);
     </script>
@@ -685,6 +665,7 @@ if (!$conn) {
         }
         setGaugeValue_P(gaugeElementPresion, <?php echo json_encode($presion); ?> / 100);
     </script>
+    
 </body>
 <!--Aqui finaliza nuestro cuerpo de la plataforma web-->
 
