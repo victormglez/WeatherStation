@@ -381,6 +381,23 @@ if (!$conn) {
             box-sizing: border-box;
         }
 
+        .gauge__cover_V_Milla {
+            width: 75%;
+            height: 150%;
+            border-radius: 50%;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-52.5%);
+
+            /* Text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10%;
+            box-sizing: border-box;
+        }
+
         /*----------------*/
 
         /*Presión*/
@@ -571,7 +588,7 @@ if (!$conn) {
         function setGaugeValue_H(gauge_H, value_H) {
             a = Math.round((value_H + Number.EPSILON) * 100);
             gauge_H.querySelector(".gauge__fill__H").style.transform = `rotate(${value_H / 2}turn)`;
-            gauge_H.querySelector(".gauge__cover__H").textContent = `${a.toFixed(2)}%`;
+            gauge_H.querySelector(".gauge__cover__H").textContent = `${a.toFixed(2)}% rH`;
         }
         setGaugeValue_H(gaugeElementHumidity, <?php echo json_encode($tiempo); ?> / 100);
     </script>
@@ -657,15 +674,12 @@ if (!$conn) {
                 gauge_P.querySelector(".gauge__fill__P").style.background = "#b4c0be";
             }
 
-            alert(value_P);
-
             a = Math.round((value_P + Number.EPSILON) * 100);
             gauge_P.querySelector(".gauge__fill__P").style.transform = `rotate(${value_P / 2}turn)`;
             gauge_P.querySelector(".gauge__cover__P").textContent = `${a.toFixed(2)} hPa`;
         }
         setGaugeValue_P(gaugeElementPresion, <?php echo json_encode($presion); ?> / 100);
     </script>
-    
 </body>
 <!--Aqui finaliza nuestro cuerpo de la plataforma web-->
 
